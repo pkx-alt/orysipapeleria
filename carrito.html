@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 11 - Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">...</header>
+
+    <main class="page-container">
+        <h1 class="page-title">Carrito</h1> 
+
+        <div class="cart-wrapper">
+            <section class="cart-items">
+                <h2>Productos en el Carrito</h2>
+                <div id="cart-item-list">
+                    <div class="cart-item">
+                        <div class="item-img-mockup"></div>
+                        <div class="item-details">
+                            <h3>Cuaderno Profesional Scriba</h3>
+                            <p>MARCA ESPIRAL DOBLE PASTA DURA...</p>
+                            <span class="item-price">$80.00 MXN</span>
+                            <button class="remove-item-btn"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                        <div class="item-quantity">
+                            <input type="number" value="1" min="1" class="qty-input">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="cart-summary">
+                <h2>RESUMEN</h2>
+                <div class="summary-details">
+                    <p>Subtotal: <span id="cart-subtotal">$0.00 MXN</span></p>
+                    <p>IVA (16%): <span id="cart-iva">$0.00 MXN</span></p>
+                    <hr>
+                    <h3>Total: <span id="cart-total">$0.00 MXN</span></h3>
+                </div>
+                <button id="generate-quotation-btn" class="primary-btn" disabled>Generar Cotización</button>
+                <p id="quotation-message" style="font-size: 0.8em; margin-top: 10px;">La cotización solo se habilita para usuarios con sesión iniciada.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="main-footer">...</footer>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>

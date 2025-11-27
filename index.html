@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 1 - Papelería Orysi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-box"></div>
+                <span>PAPELERÍA ORYSI</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="main-search-input" placeholder="Buscar">
+                <button id="main-search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-icons">
+                <a href="mis-favoritos.html" id="favorites-icon" class="icon-btn"><i class="fas fa-heart"></i></a>
+                <a href="login.html" id="user-profile-icon" class="icon-btn"><i class="fas fa-user-circle"></i></a>
+                <a href="carrito.html" id="cart-icon" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <div class="nav-dropdown-container">
+                <a href="#" class="nav-dropdown-toggle">Productos <i class="fas fa-caret-down"></i></a>
+                <div id="product-dropdown-menu" class="dropdown-menu"></div> 
+            </div>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        
+        <section class="welcome-section">
+            <div class="welcome-content">
+                <div class="logo-box"></div>
+                <h1>PAPELERÍA ORYSI</h1>
+                <p>Tu papelería completa, a un clic. Amplio surtido escolar y de oficina, directo a tu puerta.</p>
+            </div>
+        </section>
+
+        <h2 class="section-title">Categorías</h2>
+        <section class="categories-grid">
+            <a href="pagina-13-categorias.html?category=papeleria-y-oficina" class="category-card">
+        <div class="card-img-mockup" style="background-image: url('...');"></div>
+        <div class="card-text-content">
+            <h3>Papelería y oficina</h3>
+            <p>Implementos esenciales para la oficina y escuela.</p>
+        </div>
+    </a>
+            
+            <a href="pagina-13-categorias.html?category=fiesta-y-eventos" class="category-card">
+                <div class="card-img-mockup" style="background-image: url('https://via.placeholder.com/400x200/f08080/ffffff?text=Fiesta');"></div>
+                <div class="card-text-content">
+                    <h3>Fiesta y eventos</h3>
+                    <p>Globos y desechables para tus celebraciones.</p>
+                </div>
+            </a>
+            
+            <a href="pagina-13-categorias.html?category=bolsas-y-accesorios" class="category-card">
+                <div class="card-img-mockup" style="background-image: url('https://via.placeholder.com/400x200/8fbc8f/ffffff?text=Bolsas');"></div>
+                <div class="card-text-content">
+                    <h3>Bolsas y accesorios</h3>
+                    <p>Mochilas, carteras y estuches.</p>
+                </div>
+            </a>
+
+            <a href="pagina-13-categorias.html?category=zapateria" class="category-card" style="grid-column: 1 / span 3; max-width: 30%; margin: auto;">
+                <div class="card-img-mockup" style="background-image: url('https://via.placeholder.com/400x200/dda0dd/ffffff?text=Zapateria');"></div>
+                <div class="card-text-content">
+                    <h3>Zapatería</h3>
+                    <p>Calzado de dama y caballero.</p>
+                </div>
+            </a>
+        </section>
+        
+        <h2 class="section-title">Lo más vendido</h2>
+        <section class="product-grid" id="bestsellers-grid">
+            <p>Cargando productos...</p>
+        </section>
+        
+        <h2 class="section-title">Nuestros servicios</h2>
+        <section class="services-list">
+            <div class="service-item">
+                <div class="service-img-mockup" style="background-color: #f0f0f0; width: 150px; height: 150px;"></div> 
+                <div class="service-text"></div>
+                    <h3>Papelería y Centro de Copiado</h3>
+                    <p>Encuentra todo para tu éxito escolar y profesional. Ofrecemos servicio de copiado rápido y materiales de papelería.</p>
+                </div>
+            </div>
+            
+            <div class="service-item">
+                <div class="service-img-mockup" style="background-color: #f0f0f0; width: 150px; height: 150px;"></div> 
+                <div class="service-text"></div>
+                    <h3>Globería y Artículos para Fiestas</h3>
+                    <p>Transforma cualquier momento con nuestros espectaculares arreglos de globos y detalles creativos.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section logo-section">
+                <div class="logo-box"></div>
+                <span>PAPELERÍA ORYSI</span>
+            </div>
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p>Calle de la Montaña 1504, Colonia...</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes - Viernes: 9 am - 5 pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Servicio al cliente</h3>
+                <p>Facturación y pagos</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h3>Contacto</h3>
+            <p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <span>81 1234 5678</span>
+            </p>
+        </div>
+    </footer>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>

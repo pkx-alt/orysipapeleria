@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 19 - Mi Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-box"></div>
+                <span>PAPELERÍA ORYSI</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="main-search-input" placeholder="Buscar">
+                <button id="main-search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-icons">
+                <a href="mis-favoritos.html" id="favorites-icon" class="icon-btn"><i class="fas fa-heart"></i></a>
+                <a href="login.html" id="user-profile-icon" class="icon-btn"><i class="fas fa-user-circle"></i></a>
+                <a href="carrito.html" id="cart-icon" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <div class="nav-dropdown-container">
+                <a href="#" class="nav-dropdown-toggle">Productos <i class="fas fa-caret-down"></i></a>
+                <div id="product-dropdown-menu" class="dropdown-menu"></div> 
+            </div>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header> 
+
+    <main class="page-container">
+        
+        <section class="auth-box">
+            <h2>Mi perfil</h2>
+            
+            <div id="profile-container">
+                
+                <div class="profile-image-container">
+                    <img id="user-avatar" src="https://via.placeholder.com/150/f0f0f0?text=Usuario" alt="Foto de Perfil">
+                </div>
+                
+                <div class="profile-data">
+                    <p>
+                        <span class="data-label">Nombre completo:</span>
+                        <span id="profile-name">Cargando...</span>
+                    </p>
+                    <p>
+                        <span class="data-label">Correo electrónico:</span>
+                        <span id="profile-email">Cargando...</span>
+                    </p>
+                    <p>
+                        <span class="data-label">Número telefónico:</span>
+                        <span id="profile-phone">Cargando...</span>
+                    </p>
+                    
+                    <button id="logout-btn" class="secondary-btn">Cerrar sesión</button>
+                </div>
+            </div>
+
+            <p id="profile-error" style="color: var(--highlight-red); display: none;">Necesitas iniciar sesión para ver tu perfil.</p>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section logo-section">
+                <div class="logo-box"></div>
+                <span>PAPELERÍA ORYSI</span>
+            </div>
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p>Calle de la Montaña 1504, Colonia...</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes - Viernes: 9 am - 5 pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Servicio al cliente</h3>
+                <p>Facturación y pagos</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h3>Contacto</h3>
+            <p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <span>81 1234 5678</span>
+            </p>
+        </div>
+    </footer>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>
