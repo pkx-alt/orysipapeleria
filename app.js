@@ -188,6 +188,11 @@ function populateHeaderDropdown() {
 
 // Carga los productos "Lo más vendido" en la Página 1
 async function loadBestsellers() {
+    // 1. Establecer filtros mínimos para la página principal
+    pageState.baseCategory = null; 
+    pageState.selectedCategories = []; // CRÍTICO: Asegurarse de no enviar un filtro de categoría vacío
+    
+    // 2. Llamar al motor de renderizado
     await updateProductList(); // Renderiza en #bestsellers-grid
 }
 
