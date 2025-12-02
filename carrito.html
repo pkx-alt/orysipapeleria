@@ -8,7 +8,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="main-header">...</header>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-box"></div>
+                <span>PAPELERÍA ORYSI</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="main-search-input" placeholder="Buscar">
+                <button id="main-search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-icons">
+                <a href="mis-favoritos.html" id="favorites-icon" class="icon-btn"><i class="fas fa-heart"></i></a>
+                <a href="login.html" id="user-profile-icon" class="icon-btn"><i class="fas fa-user-circle"></i></a>
+                <a href="carrito.html" id="cart-icon" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <div class="nav-dropdown-container">
+                <a href="#" class="nav-dropdown-toggle">Productos <i class="fas fa-caret-down"></i></a>
+                <div id="product-dropdown-menu" class="dropdown-menu"></div> 
+            </div>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
 
     <main class="page-container">
         <h1 class="page-title">Carrito</h1> 
@@ -17,19 +42,7 @@
             <section class="cart-items">
                 <h2>Productos en el Carrito</h2>
                 <div id="cart-item-list">
-                    <div class="cart-item">
-                        <div class="item-img-mockup"></div>
-                        <div class="item-details">
-                            <h3>Cuaderno Profesional Scriba</h3>
-                            <p>MARCA ESPIRAL DOBLE PASTA DURA...</p>
-                            <span class="item-price">$80.00 MXN</span>
-                            <button class="remove-item-btn"><i class="fas fa-trash-alt"></i></button>
-                        </div>
-                        <div class="item-quantity">
-                            <input type="number" value="1" min="1" class="qty-input">
-                        </div>
                     </div>
-                </div>
             </section>
 
             <aside class="cart-summary">
@@ -40,14 +53,45 @@
                     <hr>
                     <h3>Total: <span id="cart-total">$0.00 MXN</span></h3>
                 </div>
-                <button id="generate-quotation-btn" class="primary-btn" disabled>Generar Cotización</button>
+                <button id="generate-quotation-btn" class="primary-btn">Generar Cotización</button>
                 <p id="quotation-message" style="font-size: 0.8em; margin-top: 10px;">La cotización solo se habilita para usuarios con sesión iniciada.</p>
             </aside>
         </div>
     </main>
 
-    <footer class="main-footer">...</footer>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section logo-section">
+                <div class="logo-box"></div>
+                <span>PAPELERÍA ORYSI</span>
+            </div>
+            <div class="footer-section">
+                <h3>Ubicación</h3>
+                <p>Calle de la Montaña 1504, Colonia...</p>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes - Viernes: 9 am - 5 pm</p>
+            </div>
+            <div class="footer-section">
+                <h3>Servicio al cliente</h3>
+                <p>Facturación y pagos</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h3>Contacto</h3>
+            <p>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <span>81 1234 5678</span>
+            </p>
+        </div>
+    </footer>
     
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js'></script>
+
     <script type="module" src="app.js"></script>
+    
 </body>
 </html>
