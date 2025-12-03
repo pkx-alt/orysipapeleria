@@ -8,48 +8,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="main-header">...</header>
+    <div id="global-header"></div>
 
     <main class="page-container">
-        <h1 class="page-title" id="dynamic-page-title">Cargando...</h1> 
-
-        <div class="content-wrapper">
-            <aside class="sidebar">
-                <div id="filter-categories" class="filter-group"><h2>Categoría</h2></div>
-                <div id="filter-subcategories" class="filter-group subcategory-group"><h2>Subcategoría</h2></div>
-
-                <div class="filter-group price-range">
-                    <h2>Rango de precios</h2>
-                    <div class="price-input-container">
-                        <input type="text" id="price-min-input" value="$0.00 MXN" class="price-min" readonly>
-                        <input type="text" id="price-max-input" value="$150.00 MXN" class="price-max" readonly>
-                    </div>
-                    <div class="slider-mockup"></div> 
-                </div>
-            </aside>
-
-            <section class="product-listing">
-                <div class="controls-bar">
-                    <label for="order-by">Ordenar por:</label>
-                    <select id="order-by" class="order-select">
-                        <option value="name-desc">Nombre (Descendente)</option>
-                        <option value="name-asc">Nombre (Ascendente)</option>
-                        <option value="price-min">Precio (menor precio)</option>
-                        <option value="price-max">Precio (mayor precio)</option>
-                    </select>
-                </div>
-
-                <div class="product-grid" id="product-listing-grid"> 
-                    </div>
-
-                <div class="pagination" id="product-pagination">
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="main-footer">...</footer>
     
+    <div id="breadcrumbs" class="breadcrumbs-nav"></div> 
+
+    <h2 class="section-title">Explorando productos...</h2>
+
+    <div class="content-wrapper">
+        <aside class="sidebar">
+            <div id="filter-categories" class="filter-group"><h2>Categoría</h2></div>
+            <div id="filter-subcategories" class="filter-group subcategory-group"><h2>Subcategoría</h2></div>
+
+            <div class="price-input-container">
+    <div class="price-field">
+        <span class="currency">$</span>
+        <input type="number" id="price-min-input" value="0" min="0" max="3000" class="price-input">
+        <span class="currency-suffix">MXN</span>
+    </div>
+    
+    <div class="separator">-</div>
+    
+    <div class="price-field">
+        <span class="currency">$</span>
+        <input type="number" id="price-max-input" value="3000" min="0" max="3000" class="price-input">
+        <span class="currency-suffix">MXN</span>
+    </div>
+</div>
+<div class="slider-mockup"></div>
+        </aside>
+
+        <section class="product-listing">
+            <div class="controls-bar">
+                <label for="order-by">Ordenar por:</label>
+                <select id="order-by" class="order-select">
+                    <option value="name-desc">Nombre (Descendente)</option>
+                    <option value="name-asc">Nombre (Ascendente)</option>
+                    <option value="price-min">Precio (menor precio)</option>
+                    <option value="price-max">Precio (mayor precio)</option>
+                </select>
+            </div>
+
+            <div class="product-grid" id="product-listing-grid"> 
+                <p style="text-align:center; color: #999; margin-top: 20px;">
+                    <i class="fas fa-spinner fa-spin"></i> Cargando productos...
+                </p>
+            </div>
+
+            <div class="pagination" id="product-pagination">
+            </div>
+        </section>
+    </div>
+</main>
+
+    <div id="global-footer"></div>
+    <div id="global-sidebar"></div>
+
     <script type="module" src="app.js"></script>
 </body>
 </html>

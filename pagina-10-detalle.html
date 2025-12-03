@@ -56,95 +56,61 @@
     </style>
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <div class="logo-box"></div>
-                <span>PAPELERÍA ORYSI</span>
-            </div>
-            <div class="search-bar">
-                <input type="text" id="main-search-input" placeholder="Buscar">
-                <button id="main-search-btn"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="header-icons">
-                <a href="mis-favoritos.html" id="favorites-icon" class="icon-btn"><i class="fas fa-heart"></i></a>
-                <a href="login.html" id="user-profile-icon" class="icon-btn"><i class="fas fa-user-circle"></i></a>
-                <a href="carrito.html" id="cart-icon" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-        <nav class="main-nav">
-            <a href="index.html">Inicio</a>
-            <div class="nav-dropdown-container">
-                <a href="#" class="nav-dropdown-toggle">Productos <i class="fas fa-caret-down"></i></a>
-                <div id="product-dropdown-menu" class="dropdown-menu"></div> 
-            </div>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header> 
+    <div id="global-header"></div>
 
-    <main class="page-container" id="product-detail-container">
+    <main class="page-container">
         
-        <h1 class="page-title" id="dynamic-page-title">Cargando Producto...</h1>
+        <div class="product-detail-wrapper">
+            
+            <div class="product-detail-image">
+                <div id="product-image-mockup" class="detail-img-container">
+                    <div class="heart-icon detail-heart"><i class="far fa-heart"></i></div>
+                </div>
+            </div>
 
-        <div class="content-wrapper">
-            <section class="product-listing" style="width: 100%;">
-                <div class="product-view-wrapper">
-                    
-                    <div class="product-media" id="product-image-mockup" style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+            <div class="product-detail-info">
+                
+                <div class="stock-status">
+                    <i class="fas fa-check-circle"></i> <span id="product-stock">Consultando stock...</span>
+                </div>
+
+                <h1 class="detail-title" id="dynamic-page-title">Cargando producto...</h1>
+
+                <div class="detail-price" id="product-price">$0.00 MXN</div>
+
+
+                <hr class="detail-divider">
+
+                <div class="purchase-controls">
+                    <div class="qty-selector">
+                        <button type="button" class="qty-btn minus"><i class="fas fa-minus"></i></button>
+                        <input type="number" value="1" min="1" class="qty-input" id="qty-input-detail">
+                        <button type="button" class="qty-btn plus"><i class="fas fa-plus"></i></button>
                     </div>
 
-                    <div class="product-info">
-                        
-                        <i id="favorite-toggle" class="far fa-heart large-icon"></i>
-                        
-                        <p id="product-stock" class="stock-status" style="color: #6c757d; font-weight: bold; margin-top: 10px;">Stock: N/A</p>
-                        
-                        <h2 id="product-price" class="product-price-large">$0.00 MXN</h2>
-                        
-                        <div class="qty-control">
-                            <input type="number" id="detail-qty-input" value="1" min="1"> 
-                            <button type="button" id="detailAddButton" class="primary-btn add-to-cart-detail">Añadir al Carrito</button>
-                        </div>
-                        
-                        <h3 class="section-title" style="margin-top: 40px; border-bottom: none;">Descripción detallada</h3>
-                        
-                        <p id="product-description-text" style="line-height: 1.6;"></p>
+                    <button class="add-btn add-btn-large">
+                        <i class="fas fa-shopping-bag"></i> Agregar al Carrito
+                    </button>
+                </div>
+
+                <div class="trust-badges">
+                    <div class="badge-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Envío seguro</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Garantía de calidad</span>
                     </div>
                 </div>
-            </section>
+
+            </div>
         </div>
 
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section logo-section">
-                <div class="logo-box"></div>
-                <span>PAPELERÍA ORYSI</span>
-            </div>
-            <div class="footer-section">
-                <h3>Ubicación</h3>
-                <p>Calle de la Montaña 1504, Colonia...</p>
-            </div>
-            <div class="footer-section">
-                <h3>Horario</h3>
-                <p>Lunes - Viernes: 9 am - 5 pm</p>
-            </div>
-            <div class="footer-section">
-                <h3>Servicio al cliente</h3>
-                <p>Facturación y pagos</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <h3>Contacto</h3>
-            <p>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <span>81 1234 5678</span>
-            </p>
-        </div>
-    </footer>
+    <div id="global-footer"></div>
+    <div id="global-sidebar"></div>
     
     <script type="module" src="app.js"></script>
 </body>

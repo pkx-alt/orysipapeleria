@@ -8,32 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <div class="logo-box"></div>
-                <span>PAPELERÍA ORYSI</span>
-            </div>
-            <div class="search-bar">
-                <input type="text" id="main-search-input" placeholder="Buscar">
-                <button id="main-search-btn"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="header-icons">
-                <a href="mis-favoritos.html" id="favorites-icon" class="icon-btn"><i class="fas fa-heart"></i></a>
-                <a href="login.html" id="user-profile-icon" class="icon-btn"><i class="fas fa-user-circle"></i></a>
-                <a href="carrito.html" id="cart-icon" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-        <nav class="main-nav">
-            <a href="index.html">Inicio</a>
-            <div class="nav-dropdown-container">
-                <a href="#" class="nav-dropdown-toggle">Productos <i class="fas fa-caret-down"></i></a>
-                <div id="product-dropdown-menu" class="dropdown-menu"></div> 
-            </div>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header>
+    <div id="global-header"></div>
 
     <main class="page-container">
         <h1 class="page-title">Carrito</h1> 
@@ -46,47 +21,35 @@
             </section>
 
             <aside class="cart-summary">
-                <h2>RESUMEN</h2>
+                <h2>Resumen del Pedido</h2>
+                
                 <div class="summary-details">
-                    <p>Subtotal: <span id="cart-subtotal">$0.00 MXN</span></p>
-                    <p>IVA (16%): <span id="cart-iva">$0.00 MXN</span></p>
-                    <hr>
-                    <h3>Total: <span id="cart-total">$0.00 MXN</span></h3>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00 MXN</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>IVA (16%)</span>
+                        <span id="cart-iva">$0.00 MXN</span>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00 MXN</span>
+                    </div>
                 </div>
-                <button id="generate-quotation-btn" class="primary-btn">Generar Cotización</button>
-                <p id="quotation-message" style="font-size: 0.8em; margin-top: 10px;">La cotización solo se habilita para usuarios con sesión iniciada.</p>
+
+                <button id="generate-quotation-btn" class="primary-btn">
+                    <i class="fas fa-file-pdf"></i> Generar Cotización
+                </button>
+                <p id="quotation-message" style="font-size: 0.8em; margin-top: 15px; color:#777; text-align:center;">
+                    <i class="fas fa-info-circle"></i> Inicia sesión para descargar tu PDF.
+                </p>
             </aside>
         </div>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section logo-section">
-                <div class="logo-box"></div>
-                <span>PAPELERÍA ORYSI</span>
-            </div>
-            <div class="footer-section">
-                <h3>Ubicación</h3>
-                <p>Calle de la Montaña 1504, Colonia...</p>
-            </div>
-            <div class="footer-section">
-                <h3>Horario</h3>
-                <p>Lunes - Viernes: 9 am - 5 pm</p>
-            </div>
-            <div class="footer-section">
-                <h3>Servicio al cliente</h3>
-                <p>Facturación y pagos</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <h3>Contacto</h3>
-            <p>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <span>81 1234 5678</span>
-            </p>
-        </div>
-    </footer>
+    <div id="global-footer"></div>
     
     <script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/pdfmake.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js'></script>

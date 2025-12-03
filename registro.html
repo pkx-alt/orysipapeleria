@@ -8,32 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <div class="logo-box"></div>
-                <span>PAPELERÍA ORYSI</span>
-            </div>
-            <div class="search-bar">
-                <input type="text" id="main-search-input" placeholder="Buscar">
-                <button id="main-search-btn"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="header-icons">
-                <a href="mis-favoritos.html" id="favorites-icon" class="icon-btn"><i class="fas fa-heart"></i></a>
-                <a href="login.html" id="user-profile-icon" class="icon-btn"><i class="fas fa-user-circle"></i></a>
-                <a href="carrito.html" id="cart-icon" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-        <nav class="main-nav">
-            <a href="index.html">Inicio</a>
-            <div class="nav-dropdown-container">
-                <a href="#" class="nav-dropdown-toggle">Productos <i class="fas fa-caret-down"></i></a>
-                <div id="product-dropdown-menu" class="dropdown-menu"></div> 
-            </div>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header> 
+    <div id="global-header"></div>
 
     <main class="page-container">
         
@@ -57,7 +32,7 @@
                 <label for="register-confirm-password">Confirmar contraseña</label>
                 <input type="password" id="register-confirm-password" required>
 
-                <button type="submit" id="register-btn">Registrarse</button>
+                <button type="submit" id="register-btn-action">Registrarse</button>
                 
                 <p style="margin-top: 20px;">¿Ya tienes una cuenta? <a href="login.html" class="link">Iniciar sesión</a></p>
             </form>
@@ -67,35 +42,24 @@
 
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section logo-section">
-                <div class="logo-box"></div>
-                <span>PAPELERÍA ORYSI</span>
+    <div id="global-footer"></div>
+    <div id="verify-email-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon">
+                <i class="fas fa-envelope-open-text" style="color: var(--highlight-red);"></i>
             </div>
-            <div class="footer-section">
-                <h3>Ubicación</h3>
-                <p>Calle de la Montaña 1504, Colonia...</p>
-            </div>
-            <div class="footer-section">
-                <h3>Horario</h3>
-                <p>Lunes - Viernes: 9 am - 5 pm</p>
-            </div>
-            <div class="footer-section">
-                <h3>Servicio al cliente</h3>
-                <p>Facturación y pagos</p>
+            <h3>¡Revisa tu correo!</h3>
+            <p>Hemos enviado un enlace de confirmación a:</p>
+            <p><strong id="sent-email-span" style="color: #333;">correo@ejemplo.com</strong></p>
+            <p style="font-size: 0.9em; color: #888;">No olvides revisar tu carpeta de Spam.</p>
+            
+            <div class="modal-actions">
+                <button id="close-verify-btn" class="add-btn" style="width: 100%; justify-content: center;">
+                    Entendido, ir al Login
+                </button>
             </div>
         </div>
-        <div class="footer-bottom">
-            <h3>Contacto</h3>
-            <p>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <span>81 1234 5678</span>
-            </p>
-        </div>
-    </footer>
-    
+    </div>
     <script type="module" src="app.js"></script> 
 </body>
 </html>

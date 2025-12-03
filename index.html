@@ -9,101 +9,93 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo">
-                <div class="logo-box"></div>
-                <span>PAPELERÍA ORYSI</span>
-            </div>
-            <div class="search-bar">
-                <input type="text" id="main-search-input" placeholder="Buscar">
-                <button id="main-search-btn"><i class="fas fa-search"></i></button>
-            </div>
-            <div class="header-icons">
-                <a href="mis-favoritos.html" id="favorites-icon" class="icon-btn"><i class="fas fa-heart"></i></a>
-                <a href="login.html" id="user-profile-icon" class="icon-btn"><i class="fas fa-user-circle"></i></a>
-                <a href="carrito.html" id="cart-icon" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </div>
-        
-        <nav class="main-nav">
-            <a href="index.html">Inicio</a>
-            <div class="nav-dropdown-container">
-                <a href="#" class="nav-dropdown-toggle">Productos <i class="fas fa-caret-down"></i></a>
-                <div id="product-dropdown-menu" class="dropdown-menu"></div> 
-            </div>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header>
-
+    <div id="global-header"></div>
     <main class="page-container">
         
         <section class="welcome-section">
-            <div class="welcome-content">
-                <div class="logo-box"></div>
-                <h1>PAPELERÍA ORYSI</h1>
-                <p>Tu papelería completa, a un clic. Amplio surtido escolar y de oficina, directo a tu puerta.</p>
-            </div>
-        </section>
-
+        <div class="welcome-overlay"></div> <div class="welcome-content">
+            <h1>PAPELERÍA ORYSI</h1>
+            <p>Tu papelería completa, a un clic.<br>Amplio surtido escolar y de oficina, directo a tu puerta.</p>
+            
+            <a href="#categories-grid-container" class="btn-hero">
+                Ver Catálogo <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
         <h2 class="section-title">Categorías</h2>
         <section class="categories-grid" id="categories-grid-container">
             </section>
         
-        <h2 class="section-title">Lo más vendido</h2>
+        <div class="section-header-row">
+            <h2 class="section-title">Lo más vendido</h2>
+            
+            <a href="pagina-15-buscador.html" class="btn-view-all">
+                Ver todos <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
         <section class="product-grid" id="bestsellers-grid">
-            <p>Cargando productos...</p>
+            <p style="text-align:center;">Cargando productos...</p>
         </section>
         
         <h2 class="section-title">Nuestros servicios</h2>
-        <section class="services-list">
-            <div class="service-item">
-                <div class="service-img-mockup" style="background-color: #e0e0e0; width: 150px; height: 150px;"></div>
-                <div class="service-text">
-                    <h3>Papelería y Centro de Copiado</h3>
-                    <p>Encuentra todo para tu éxito escolar y profesional. Ofrecemos servicio de copiado rápido y materiales de papelería.</p>
+        <section class="services-section" id="servicios">
+        <div class="page-container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 40px;">
+                Soluciones Rápidas y Profesionales
+            </h2>
+            
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Decoración y Eventos</h3>
+                        <p>Transformamos tus celebraciones. Ofrecemos envolturas creativas, cajas personalizadas y todo lo necesario para que tus regalos luzcan espectaculares.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="service-item">
-                <div class="service-img-mockup" style="background-color: #f0f0f0; width: 150px; height: 150px;"></div>
-                <div class="service-text">
-                    <h3>Globería y Artículos para Fiestas</h3>
-                    <p>Transforma cualquier momento con nuestros espectaculares arreglos de globos y detalles creativos.</p>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Papelería y Centro de Copiado</h3>
+                        <p>Tu oficina al día. Impresiones de alta calidad, fotocopiado rápido, escaneo de documentos y todo el material escolar y de oficina que necesitas.</p>
+                    </div>
                 </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i> </div>
+                    <div class="service-info">
+                        <h3>Globería y Artículos de Fiesta</h3>
+                        <p>¡Que empiece la fiesta! Gran variedad de globos metálicos, de látex, números gigantes y accesorios para darle color y alegría a tus momentos especiales.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shoe-prints"></i>
+                    </div>
+                    <div class="service-info">
+                        <h3>Zapatería y Accesorios</h3>
+                        <p>Más que una papelería. Encuentra calzado escolar, casual y accesorios de moda como bolsas y carteras. Calidad y estilo en un solo lugar.</p>
+                    </div>
+                </div>
+
             </div>
-        </section>
+        </div>
+    </section>
 
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section logo-section">
-                <div class="logo-box"></div>
-                <span>PAPELERÍA ORYSI</span>
-            </div>
-            <div class="footer-section">
-                <h3>Ubicación</h3>
-                <p>Calle de la Montaña 1504, Colonia...</p>
-            </div>
-            <div class="footer-section">
-                <h3>Horario</h3>
-                <p>Lunes - Viernes: 9 am - 5 pm</p>
-            </div>
-            <div class="footer-section">
-                <h3>Servicio al cliente</h3>
-                <p>Facturación y pagos</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <h3>Contacto</h3>
-            <p>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <span>81 1234 5678</span>
-            </p>
-        </div>
-    </footer>
+    <div id="global-footer"></div>
+
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <div id="global-sidebar"></div>
     
     <script type="module" src="app.js"></script>
 </body>
